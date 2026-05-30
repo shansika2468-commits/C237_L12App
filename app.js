@@ -109,6 +109,14 @@ app.post("/restaurants/:id/update", (req, res) => {
 
 });
 
+// Delete review
+app.post("/restaurants/:id/delete", (req, res) => {
+    restaurants = restaurants.filter(r =>
+        r.id != req.params.id
+    );
+    res.redirect("/restaurants");
+});
+
 // ---------------------------------------------------
 
 // Start the server
