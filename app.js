@@ -92,7 +92,23 @@ app.get("/restaurants/:id/edit", (req, res) => {
 
     }
 );
-//
+// Update review page
+app.post("/restaurants/:id/update", (req, res) => {
+
+  const restaurant = restaurants.find(r =>
+    r.id == req.params.id
+  );
+
+  restaurant.name = req.body.name;
+  restaurant.cuisine = req.body.cuisine;
+  restaurant.rating = req.body.rating;
+  restaurant.bestFood = req.body.bestFood;
+  restaurant.review = req.body.review;
+
+  res.redirect("/restaurants");
+
+});
+
 // ---------------------------------------------------
 
 // Start the server
