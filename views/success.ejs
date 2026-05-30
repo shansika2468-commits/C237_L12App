@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/style.css">
+
+<%- include("partials/navbar") %>
+
+<div class="container">
+
+  <h1>Review Added Successfully!</h1>
+
+  <p>
+    <strong>Restaurant Name:</strong>
+    <%= restaurant.name %>
+  </p>
+
+  <p>
+    <strong>Cuisine:</strong>
+    <%= restaurant.cuisine %>
+  </p>
+
+  <p>
+    <strong>Rating:</strong>
+    <%= restaurant.rating %>/5
+  </p>
+
+  <p>
+    <strong>Best Food:</strong>
+    <%= restaurant.bestFood %>
+  </p>
+
+  <p>
+    <strong>Review:</strong>
+    <%= restaurant.review %>
+  </p>
+
+  <br>
+
+  <a href="/restaurants">
+    View All Reviews
+  </a>
+
+  <br><br>
+
+  <a href="/restaurants/new">
+    Add Another Review
+  </a>
+
+</div>
