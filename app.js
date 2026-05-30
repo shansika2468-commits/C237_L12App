@@ -10,6 +10,8 @@ app.set('view engine', 'ejs');
 // Middleware to parse request bodies
 app.use(express.urlencoded({ extended: true }));
 
+app.use(express.static("public"));
+
 // Declare any necessary variables or in-memory data structures here
 
 let restaurants = [

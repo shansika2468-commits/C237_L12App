@@ -1,0 +1,49 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  background-color: #8d054f;
+  padding: 15px;
+}
+
+.navbar h2 {
+  color: white;
+  display: inline;
+  margin-right: 30px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.container {
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th,
+td {
+  border: 1px solid #060606;
+  padding: 10px;
+}
+
+button {
+  padding: 5px 10px;
+}
+
+input,
+textarea,
+select {
+  width: 300px;
+  padding: 8px;
+}
