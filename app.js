@@ -70,7 +70,7 @@ app.get("/restaurants/new", (req, res) => {
 //add review
 app.post("/restaurants", (req, res) => {
     const newRestaurant = {
-        id= date.now(),
+        id: Date.now(),
         name: req.body.name,
         cuisine: req.body.cuisine,
         rating: req.body.rating,
@@ -87,7 +87,7 @@ app.post("/restaurants", (req, res) => {
 
 //show edit page
 app.get("/restaurants/:id/edit", (req, res) => {
-    const restaurant = restaurants.find(r => r.id === req.params.id);
+    const restaurant = restaurants.find(r => r.id == req.params.id);
     res.render("edit", { restaurant });
 
     }
