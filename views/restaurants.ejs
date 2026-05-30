@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="/style.css">
+
+<%- include("partials/navbar") %>
+
+<div class="container">
+
+  <h1>Restaurant Reviews</h1>
+
+  <form method= "Get" action ="/restuarants">
+    <select name= "cuisine" >
+        <option value="">All Cuisines</option>
+        <option value="Mexican">Mexican</option>
+        <option value="Korean">Korean</option>
+        <option value="Japanese">Japanese</option>
+    </select>
+    <button type="submit" class="btn btn-primary">submit</button>
+    </form>
+     <br><table>
+    <tr>
+    <th>Name</th>
+    <th>Cuisine</th>
+    <th>Rating</th>
+    <th>Best Food</th>
+    <th>Review</th>
+    </tr>
+// Loop through the restaurants array and display each restaurant's details in a table row
+     <% restaurants.forEach(restaurant => { %>
+
+      <tr>
+
+        <td>
+          <%= restaurant.name %>
+        </td>
+
+        <td>
+          <%= restaurant.cuisine %>
+        </td>
+
+        <td>
+          <%= restaurant.rating %>
+        </td>
+
+        <td>
+          <%= restaurant.bestFood %>
+        </td>
+
+        <td>
+          <%= restaurant.review %>
+        </td>
+
+        <td>
+
+          <a href="/restaurants/<%= restaurant.id %>/edit">
+
+            <button type="button">
+              Edit
+            </button>
+            
+          </a>
+
+          <form
+            action="/restaurants/<%= restaurant.id %>/delete"
+            method="POST"
+          >
+
+        <button type="submit">
+              Delete
+            </button>
+            
+
+            
+
+          </form>
+
+        </td>
+
+      </tr>
+
+    <% }) %>
+
+  </table>
+
+</div>
+  
